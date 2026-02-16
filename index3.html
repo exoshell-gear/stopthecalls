@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>StopTheCalls.us — Stop Debt Collector Calls</title>
+<meta name="description" content="Stop debt collector calls legally. We prepare and mail a cease & desist letter by certified mail with tracking." />
+
+<style>
+:root{
+  --bg:#060912;
+  --card:#0e1422cc;
+  --card2:#0b1222cc;
+  --line:#ffffff14;
+  --text:#eef2ff;
+  --muted:#9aa7c2;
+  --accent1:#4f8cff;
+  --accent2:#7a5cff;
+  --shadow: 0 30px 110px #00000090;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto;
+  background:
+    radial-gradient(900px 500px at 15% 0%, #4f8cff22, transparent 60%),
+    radial-gradient(1000px 600px at 85% 10%, #7a5cff22, transparent 60%),
+    var(--bg);
+  color:var(--text);
+  padding:22px;
+}
+
+/* Layout */
+.wrap{width:min(980px,100%);margin:0 auto}
+.stack{display:flex;flex-direction:column;gap:18px}
+
+/* Top */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:18px;
+}
+.brand{
+  font-weight:900;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.dot{
+  width:10px;height:10px;border-radius:999px;
+  background:linear-gradient(135deg,var(--accent1),var(--accent2));
+  box-shadow:0 0 14px var(--accent1);
+}
+.pill{
+  font-size:12px;
+  padding:8px 12px;
+  border-radius:999px;
+  background:#ffffff08;
+  border:1px solid var(--line);
+  color:var(--muted);
+  font-weight:800;
+  white-space:nowrap;
+}
+
+/* Hero */
+.hero{
+  border:1px solid var(--line);
+  border-radius:26px;
+  padding:44px 34px;
+  background:linear-gradient(180deg,#0e1628cc,#0b1222cc);
+  backdrop-filter:blur(12px);
+  box-shadow:var(--shadow);
+
+  display:grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap:60px;
+  align-items:center;
+}
+
+h1{
+  font-size:clamp(40px,6.2vw,72px);
+  line-height:1.02;
+  margin:0 0 10px;
+  letter-spacing:-.01em;
+  font-weight:900;
+}
+.sub{
+  font-size:18px;
+  color:var(--muted);
+  max-width:640px;
+  margin:0;
+}
+.row{
+  margin-top:18px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.micro{
+  font-size:13px;
+  color:#7f8aa5;
+  font-weight:650;
+  margin-top:10px;
+}
+
+
+/* Buttons */
+.btn{
+  text-decoration:none;
+  padding:16px 20px;
+  border-radius:14px;
+  font-weight:900;
+  letter-spacing:.2px;
+  border:1px solid transparent;
+  transition:.2s ease;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+.btn.primary{
+  background:linear-gradient(135deg,var(--accent1),var(--accent2));
+  color:white;
+  box-shadow:0 10px 40px #4f8cff40;
+}
+.btn.primary:hover{transform:translateY(-2px);box-shadow:0 14px 50px #4f8cff60}
+.btn.secondary{
+  background:#ffffff08;
+  color:var(--text);
+  border:1px solid #2b3a5c;
+}
+.btn.secondary:hover{border-color:var(--accent1);box-shadow:0 0 20px #4f8cff30;transform:translateY(-2px)}
+
+/* Sections */
+.section{
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:var(--card);
+  padding:30px;
+}
+.section h2{
+  margin:0 0 10px;
+  font-size:30px;
+  line-height:1.1;
+  letter-spacing:-.02em;
+  font-weight:950;
+}
+.section p{
+  color:var(--muted);
+  line-height:1.55;
+  margin:10px 0 0;
+  font-size:16px;
+}
+.kicker{
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  margin-bottom:10px;
+  font-size:12px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#b7c4da;
+  font-weight:900;
+}
+.kicker .spark{
+  width:8px;height:8px;border-radius:999px;
+  background:linear-gradient(135deg,var(--accent1),var(--accent2));
+  box-shadow:0 0 14px #4f8cff70;
+}
+
+/* Steps */
+.grid{display:grid;gap:14px;margin-top:14px}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.step{
+  position:relative;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#0d1527aa;
+  padding:18px 18px 18px 18px;
+  color:var(--muted);
+  font-size:16px;
+  min-height:88px;
+}
+.step .num{
+  position:absolute;
+  top:14px; left:14px;
+  width:34px;height:34px;border-radius:999px;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:950;
+  color:#0b1020;
+  background:linear-gradient(135deg,#b9d2ff,#d8c8ff);
+  box-shadow:0 10px 30px #00000060;
+}
+.step .txt{
+  padding-left:46px;
+  color:var(--text);
+  font-weight:800;
+  line-height:1.25;
+}
+.step .subtxt{
+  padding-left:46px;
+  margin-top:6px;
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* Price box */
+.price-box{
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:linear-gradient(180deg,#101a33cc,#0c1427cc);
+  padding:38px 30px;
+  text-align:center;
+  box-shadow:0 24px 90px #00000070;
+}
+.price-box h2{margin:0 0 8px;font-size:32px;font-weight:950}
+.price{
+  font-size:54px;
+  font-weight:980;
+  letter-spacing:-.02em;
+  margin:6px 0;
+}
+.small{font-size:14px;color:#7d8bb0;margin-top:6px}
+
+.price-wrapper{
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  gap:16px;
+  margin:12px 0 6px;
+}
+
+.old-price{
+  font-size:28px;
+  font-weight:900;
+  color:#8ea0c7;
+  text-decoration:line-through;
+  opacity:.65;
+}
+
+.new-price{
+  font-size:64px;
+  font-weight:1000;
+  letter-spacing:-.03em;
+  line-height:1;
+}
+
+
+/* Trust chips */
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.chip{
+  border:1px solid var(--line);
+  background:#ffffff08;
+  color:#b7c4da;
+  padding:8px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:850;
+}
+
+/* FAQ */
+.faq-item{
+  border:1px solid var(--line);
+  border-radius:18px;
+  margin-top:14px;
+  background:#0f1628aa;
+  overflow:hidden;
+  transition:.25s ease;
+}
+.faq-item:hover{
+  border-color:var(--accent1);
+  box-shadow:0 0 30px #4f8cff20;
+}
+.faq-question{
+  width:100%;
+  padding:18px 18px;
+  background:none;
+  border:none;
+  color:var(--text);
+  font-size:16px;
+  font-weight:900;
+  text-align:left;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+}
+.faq-icon{
+  width:34px;height:34px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  background:#ffffff08;
+  border:1px solid var(--line);
+  color:var(--muted);
+  transition:.25s ease;
+  font-size:18px;
+  flex:0 0 auto;
+}
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .35s ease, padding .3s ease;
+  padding:0 18px;
+  color:var(--muted);
+  line-height:1.55;
+  font-size:15px;
+}
+.faq-item.active .faq-answer{
+  max-height:260px;
+  padding:0 18px 18px;
+}
+.faq-item.active .faq-icon{transform:rotate(45deg)}
+
+/* Footer */
+.footer{
+  margin-top:18px;
+  text-align:center;
+  font-size:13px;
+  color:#6e7a99;
+}
+
+/* Mobile */
+@media(max-width:900px){
+  body{padding:14px}
+  .pill{display:none}
+  .hero{padding:30px 18px;border-radius:22px}
+  h1{font-size:clamp(40px,10vw,54px)}
+  .sub{font-size:16px}
+  .section{padding:22px}
+  .section h2{font-size:26px}
+  .grid-3{grid-template-columns:1fr}
+  .btn{width:100%}
+  .row{gap:10px}
+  .chips{gap:8px}
+}
+
+/* Sticky CTA (mobile) */
+
+.priceTag{
+  display:flex;
+  flex-direction:column;
+  line-height:1;
+}
+
+.old-mini{
+  font-size:16px;
+  font-weight:800;
+  color:#8ea0c7;
+  text-decoration:line-through;
+  opacity:.7;
+}
+
+.new-mini{
+  font-size:22px;
+  font-weight:1000;
+  letter-spacing:-.02em;
+  color:white;
+}
+
+
+.sub-mini{
+  font-size:11px;
+  color:#a9b9d6;
+  font-weight:800;
+  margin-top:2px;
+}
+
+
+.sticky{
+  position:fixed;
+  left:0; right:0; bottom:0;
+  padding:10px 12px;
+  background:linear-gradient(180deg, #05081000, #050810dd 28%, #050810ff);
+  backdrop-filter:blur(10px);
+  display:none;
+  z-index:50;
+}
+.sticky .bar{
+  width:min(980px,100%);
+  margin:0 auto;
+  display:flex;
+  gap:10px;
+  align-items:center;
+  justify-content:space-between;
+}
+.sticky .priceTag{
+  font-weight:950;
+  letter-spacing:-.02em;
+  color:var(--text);
+}
+.sticky .priceTag span{color:#a9b9d6;font-weight:850;font-size:12px;display:block;margin-top:2px}
+@media(max-width:900px){
+  .sticky{display:block}
+  .sticky .bar{gap:10px}
+  .sticky .btn{flex:1}
+
+}
+
+/* Split Section Layout */
+
+.split{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.split.reverse{
+  direction:rtl;
+}
+
+.split.reverse > *{
+  direction:ltr;
+}
+
+.image-box{
+  border:1px solid var(--line);
+  border-radius:22px;
+  overflow:hidden;
+  background:#0d1527;
+  box-shadow:0 20px 70px #00000080;
+}
+
+.hero .image-box{
+  height:100%;
+  min-height:420px;
+}
+
+.image-box img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* Mobile */
+@media(max-width:900px){
+  .split{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  .split.reverse{
+    direction:ltr;
+  }
+
+  .image-box{
+    margin-top:10px;
+  }
+
+  .hero{
+  grid-template-columns:1fr;
+  gap:24px;
+  padding:30px 18px;
+}
+
+.hero .image-box{
+  min-height:220px;
+  height:220px;
+}
+
+.hero .image-box img{
+  object-position:center top;
+}
+
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <div class="nav">
+    <div class="brand"><span class="dot"></span> StopTheCalls.us</div>
+    <div class="pill">Certified Letter • Tracking</div>
+  </div>
+
+<section class="hero">
+
+  <div>
+    <h1>Force debt collectors to stop calling you.</h1>
+    <p class="sub">We deliver a legally compliant stop-contact notice that collectors are required to obey.</p>
+
+    <div class="row">
+      <a href="#checkout" class="btn primary">Stop The Calls Now</a>
+    </div>
+
+    <div class="micro">Takes 2 minutes • Lawyer approved</div>
+  </div>
+
+  <div class="image-box">
+    <img src="hero.jpg" alt="Person stressed by phone calls">
+  </div>
+
+</section>
+
+
+  <div class="stack" style="margin-top:16px;">
+
+    <!-- UPDATED: section now has image, same split system as hero -->
+    <section class="section split reverse">
+      <div>
+        <div class="kicker"><span class="spark"></span> The harassment</div>
+        <h2>Their goal is to wear you down</h2>
+        <p>They call constantly, changing phone numbers and agents to intimidate and apply pressure on you.</p>
+        <p>They call your phone, your work, your family, and friends, ruining your reputation.</p>
+        <p><b style="color:var(--text);">They rely on you not knowing your rights.</b></p>
+        <div class="row">
+          <a href="#checkout" class="btn secondary">Stop The Calls Now</a>
+          <div class="micro">Fast • Simple • Effective</div>
+        </div>
+      </div>
+
+      <div class="image-box">
+        <img src="harassment.jpg" alt="Debt collector calling repeatedly">
+      </div>
+    </section>
+
+    <!-- UPDATED: section now has image + alternating side on desktop -->
+    <section class="section split">
+      <div>
+        <div class="kicker"><span class="spark"></span> The relief</div>
+        <h2>You have more power than you know</h2>
+        <p>Under U.S. federal law, you have the right to demand that debt collectors stop contacting you.</p>
+        <p>Not negotiate, not argue, not explain. Demand.</p>
+        <p>When properly notified, collectors are legally required to stop the harassment.</p>
+        <p>We handle that process correctly and professionally on your behalf.</p>
+
+        <p><b style="color:var(--text);">You get your peace back.</b></p>
+        <div class="row">
+          <a href="#checkout" class="btn secondary">Stop The Calls Now</a>
+          <div class="micro">Handled professionally • Fully compliant</div>
+        </div>
+      </div>
+
+      <div class="image-box">
+        <img src="relief.jpg" alt="Person feeling relief and calm">
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="kicker"><span class="spark"></span> The steps</div>
+      <h2>3 Simple Steps</h2>
+
+      <div class="grid grid-3">
+        <div class="step">
+          <div class="num">1</div>
+          <div class="txt">Pay securely</div>
+          <div class="subtxt">One-time fee. No subscription.</div>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <div class="txt">Enter details</div>
+          <div class="subtxt">Tell us who's harassing you. Agency name + your details.</div>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <div class="txt">We handle the rest</div>
+          <div class="subtxt">We prepare and deliver the legally compliant notice required to enforce your rights.
+          You get confirmation once the process is complete.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="price-box" id="checkout">
+  <h2>Flat Fee. No Subscription.</h2>
+
+  <div class="price-wrapper">
+    <div class="old-price">$59.99</div>
+    <div class="price">$39.99</div>
+  </div>
+
+  <div class="small">Everything required to properly invoke your stop-contact rights.</div>
+  <div class="small" style="margin-top:6px; color:#a9b9d6;">
+    Limited time launch pricing
+  </div>
+
+  <div class="row" style="justify-content:center; margin-top:20px;">
+    <a href="#" class="btn primary" style="min-width:240px;">Enfore My Rights Now</a>
+  </div>
+</section>
+
+
+    <section class="section" id="faq">
+      <div class="kicker"><span class="spark"></span> Questions</div>
+      <h2>FAQ</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          How to stop debt collection calls?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          You can send a written stop-contact notice. Once they receive it, they must stop contacting you,
+          except to confirm they will stop or to notify of legal action.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          Is this legal?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Yes. Federal law allows consumers to formally demand that debt collectors stop contacting them. We prepare and deliver the required notice in compliance with those laws.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          Will they really stop calling?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Yes. Once properly notified, they are required by law to stop.
+If they don’t, they can get in serious trouble and you can file a complaint.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          Does this erase my debt?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          No. This does not eliminate a valid debt. It stops the harassment and repeated contact.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          Can they still sue me?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Legally, yes, depending on the amount you owe.
+In most cases, lawsuits cost more than they can recover, so they don’t pursue them.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          What if they ignore the notice?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          You can file a complaint with your local government.
+That can seriously threaten their ability to operate and force them to stop.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          Is this a law firm?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          No. We are not a law firm. We specialize in preparing and delivering compliant stop-contact notices.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button">
+          How long will it take?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          We send it within 1 business day. You’ll get tracking once it’s mailed.
+        </div>
+      </div>
+
+    </section>
+
+    <section class="section" style="text-align:center;">
+      <p class="small" style="margin:0;">
+        This service enforces your right to stop unwanted collection calls.
+It does not eliminate debt or prevent lawful legal action.<br>
+        <b style="color:var(--text);">Stops the calls.</b>
+      </p>
+    </section>
+
+    <div class="footer">© 2026 StopTheCalls.us</div>
+  </div>
+
+</div>
+
+<!-- Mobile sticky CTA -->
+<div class="sticky" aria-hidden="true">
+  <div class="bar">
+    <div class="priceTag">
+      <span class="old-mini">$59.99</span>
+      <span class="new-mini">$39.99</span>
+    </div>
+    <a href="#checkout" class="btn primary">Stop The Calls Now</a>
+  </div>
+</div>
+
+
+<script>
+  // FAQ toggle
+  document.querySelectorAll(".faq-question").forEach(btn => {
+    btn.addEventListener("click", () => {
+      btn.parentElement.classList.toggle("active");
+    });
+  });
+</script>
+
+</body>
+</html>
