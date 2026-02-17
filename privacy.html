@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy – StopTheCalls.us</title>
+
+<style>
+:root{
+  --bg:#060912;
+  --card:#0e1422cc;
+  --line:#ffffff14;
+  --text:#eef2ff;
+  --muted:#9aa7c2;
+  --accent1:#4f8cff;
+  --accent2:#7a5cff;
+  --shadow: 0 30px 110px #00000090;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%; scroll-behavior: smooth;}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto;
+  background:
+    radial-gradient(900px 500px at 15% 0%, #4f8cff15, transparent 60%),
+    radial-gradient(1000px 600px at 85% 10%, #7a5cff15, transparent 60%),
+    var(--bg);
+  background-attachment: fixed;
+  color:var(--text);
+  padding:22px;
+  line-height: 1.6;
+}
+
+.wrap{width:min(850px,100%); margin:0 auto}
+
+/* Nav */
+.nav{display:flex; justify-content:space-between; align-items:center; margin-bottom:40px;}
+.brand{font-weight:900; letter-spacing:.5px; text-transform:uppercase; display:flex; align-items:center; gap:10px; text-decoration:none; color:inherit;}
+.dot{width:10px; height:10px; border-radius:999px; background:linear-gradient(135deg,var(--accent1),var(--accent2)); box-shadow:0 0 14px var(--accent1);}
+.back-link{font-size:13px; font-weight:800; color:var(--accent1); text-decoration:none; border:1px solid #4f8cff30; padding:8px 16px; border-radius:99px; background:#4f8cff10; transition:0.2s;}
+.back-link:hover{background:#4f8cff20; transform:translateY(-1px);}
+
+/* Header */
+header{margin-bottom:48px;}
+h1{font-size:clamp(32px, 5vw, 48px); font-weight:1000; letter-spacing:-.03em; margin:0 0 12px;}
+.last-updated{color:var(--muted); font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em;}
+
+/* Content Cards */
+.policy-container{display:flex; flex-direction:column; gap:20px;}
+.policy-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:32px;
+  backdrop-filter:blur(12px);
+  box-shadow:var(--shadow);
+}
+h2{color:var(--accent1); font-size:20px; font-weight:900; margin-top:0; margin-bottom:16px; display:flex; align-items:center; gap:12px;}
+h2::before{content:""; width:4px; height:20px; background:var(--accent1); border-radius:99px;}
+p{color:var(--text); opacity:0.9; margin:0 0 12px;}
+ul{margin:0; padding-left:20px; color:var(--muted);}
+li{margin-bottom:8px;}
+
+@media(max-width:600px){
+  body{padding:16px;}
+  .policy-card{padding:24px;}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav class="nav">
+    <a href="index.html" class="brand"><span class="dot"></span> StopTheCalls</a>
+    <a href="index.html" class="back-link">← Return Home</a>
+  </nav>
+
+  <header>
+    <h1>Privacy Policy</h1>
+    <div class="last-updated">Last Updated: February 17, 2026</div>
+  </header>
+
+  <div class="policy-container">
+    <section class="policy-card">
+      <h2>1. Information We Collect</h2>
+      <p>To provide our service, we collect the following information provided by you in the intake form:</p>
+      <ul>
+        <li>Identification: Full name and physical mailing address.</li>
+        <li>Case Details: Collection agency name, account numbers, and phone numbers receiving calls.</li>
+        <li>Communication: Email address for order status and tracking updates.</li>
+        <li>Attachments: Any screenshots or documents you choose to upload.</li>
+      </ul>
+    </section>
+
+    <section class="policy-card">
+      <h2>2. How We Use Your Data</h2>
+      <p>We use your information strictly for the following purposes:</p>
+      <ul>
+        <li>Generating and mailing your legal Cease & Desist notice.</li>
+        <li>Sending you a digital copy of your letter and USPS tracking information.</li>
+        <li>Providing customer support regarding your specific submission.</li>
+      </ul>
+      <p><strong>We do not sell, rent, or trade your personal data to third parties for marketing purposes.</strong></p>
+    </section>
+
+    <section class="policy-card">
+      <h2>3. Data Security</h2>
+      <p>We implement industry-standard security measures to protect your information. Your intake data is transmitted via secure SSL/TLS encryption and stored in a controlled environment. Once a notice is mailed and the retention period for customer support ends, we minimize the data kept on our active servers.</p>
+    </section>
+
+    <section class="policy-card">
+      <h2>4. Third-Party Services</h2>
+      <p>To fulfill our service, we share necessary details with specific third parties:</p>
+      <ul>
+        <li><strong>Stripe:</strong> Processes your payment information (we never see or store your full credit card details).</li>
+        <li><strong>USPS/Mail Fulfillment:</strong> Necessary details are shared to print and mail your certified letter.</li>
+        <li><strong>Formspree:</strong> Manages the secure transmission of your intake form.</li>
+      </ul>
+    </section>
+
+    <section class="policy-card">
+      <h2>5. Your Rights</h2>
+      <p>You have the right to request a copy of the data we have stored for you or to request the deletion of your personal information after your letter has been delivered. To exercise these rights, please contact us at the email below.</p>
+    </section>
+
+    <section class="policy-card" style="text-align: center;">
+      <h2>Contact Us</h2>
+      <p>If you have questions about this Privacy Policy, contact us at:</p>
+      <a href="mailto:hello@stopthecalls.site" style="color:var(--accent1); font-weight:900; text-decoration:none;">hello@stopthecalls.site</a>
+    </section>
+  </div>
+</div>
+
+</body>
+</html>
