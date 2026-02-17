@@ -29,6 +29,7 @@ body{
     radial-gradient(900px 500px at 15% 0%, #4f8cff15, transparent 60%),
     radial-gradient(1000px 600px at 85% 10%, #7a5cff15, transparent 60%),
     var(--bg);
+  background-attachment: fixed; /* Keeps gradient in place */
   color:var(--text);
   padding:22px;
 }
@@ -112,13 +113,34 @@ body{
 .faq-a{max-height:0;overflow:hidden;transition:0.3s ease;color:var(--muted);margin-top:0;}
 .faq-item.active .faq-a{max-height:300px;margin-top:15px;}
 
+.sticky { display: none; }
+
 /* Mobile */
 @media(max-width:800px){
   .bento, .step-grid, .reddit-proof, .testimonial-grid{display:flex; flex-direction:column;}
-  .sticky{display:block;}
-  body{padding-bottom:100px;}
+  
+  /* Main page buttons go full width */
+  .hero .btn, .price-box .btn { width: 100%; }
+  
+  .sticky { display: block; }
+  body { padding-bottom: 100px; }
+
+  .sticky {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(180deg,#0e1628ee,#0b1222ee);
+  border-top: 1px solid var(--line);
+  padding: 14px 20px;
+  z-index: 999;
+  backdrop-filter: blur(10px);
 }
-.sticky{position:fixed;bottom:0;left:0;right:0;background:rgba(6,9,18,0.9);backdrop-filter:blur(10px);padding:12px 20px;border-top:1px solid var(--line);display:none;z-index:100;}
+  
+  /* Sticky button stays side-by-side to save space */
+  .sticky-content { display: flex; justify-content: space-between; align-items: center; }
+  .sticky .btn { width: auto; padding: 12px 20px; font-size: 15px; }
+}
 </style>
 </head>
 <body>
@@ -126,7 +148,7 @@ body{
 <div class="wrap stack">
   
   <div class="nav">
-    <div class="brand"><span class="dot"></span> StopTheCalls.us</div>
+    <div class="brand"><span class="dot"></span> StopTheCalls</div>
     <div class="pill">Certified Federal Notices</div>
   </div>
 
@@ -134,7 +156,7 @@ body{
     <div class="fed-badge">Federal Law Protection (FDCPA)</div>
     <h1>Silence the collectors. <br>Reclaim your phone.</h1>
     <p>We exercise your Federal right to stop unwanted contact. One official letter legally forces them to stop calling you, your family, and your workplace.</p>
-    <a href="#start" class="btn primary">Start My Notice — $39</a>
+    <a href="https://buy.stripe.com/3cI28q1yVa3W9iF3B70RG01" class="btn primary">Stop The Calls · $39</a>
   </section>
 
   <section class="reddit-proof">
@@ -156,29 +178,29 @@ body{
     <div class="testimonial-grid">
       <div class="testimonial-card">
         <div class="t-stars">★★★★★</div>
-        <div class="t-text">"When they started calling my mom, I couldn't sleep. I used this service, and 4 days later she told me the phone finally stopped ringing. Worth every penny."</div>
-        <div class="t-author">Verified User — Sarah M.</div>
+        <div class="t-text">"When they started calling my mom, I couldn't sleep. I used this service, and 4 days later she told me her phone finally stopped ringing. Worth every penny."</div>
+        <div class="t-author">Verified User · Sarah M.</div>
       </div>
       <div class="testimonial-card">
         <div class="t-stars">★★★★★</div>
         <div class="t-text">"I tried telling them to stop for months. Once I got the notification that they signed for this legal letter, everything changed. One more call and I have proof for a lawsuit."</div>
-        <div class="t-author">Verified User — David R.</div>
+        <div class="t-author">Verified User · David R.</div>
       </div>
       <div class="testimonial-card">
         <div class="t-stars">★★★★★</div>
-        <div class="t-text">"I looked up how to send a certified letter myself—Form 3800, waiting at the post office... it's a nightmare. This took 2 minutes on my phone."</div>
-        <div class="t-author">Verified User — James K.</div>
+        <div class="t-text">"I looked up how to send a certified letter myself. Form 3800, waiting at the post office etc. It's a lot. This took 2 minutes on my phone."</div>
+        <div class="t-author">Verified User · James K.</div>
       </div>
       <div class="testimonial-card">
         <div class="t-stars">★★★★★</div>
-        <div class="t-text">"My phone used to vibrate 10 times a day. It's been 72 hours since the delivery notification and I finally have silence again."</div>
-        <div class="t-author">Verified User — Elena P.</div>
+        <div class="t-text">"My phone used to vibrate like 10 times a day. It's been 3 days since the delivery notification and I finally have silence again."</div>
+        <div class="t-author">Verified User · Elena P.</div>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <h2 style="text-align:center;">Why not just send the letter yourself?</h2>
+    <h2 style="text-align:center;">Why not do it yourself?</h2>
     <div class="bento">
       <div class="bento-card b1">
         <h4 style="margin:0;">The Post Office Trap</h4>
@@ -230,7 +252,7 @@ body{
       <div class="old-price">$59.99</div>
       <div class="new-price">$39.99</div>
     </div>
-    <a href="#" class="btn primary">Enforce My Rights Now</a>
+    <a href="https://buy.stripe.com/3cI28q1yVa3W9iF3B70RG01" class="btn primary">Stop The Calls Now</a>
   </section>
 
   <section class="section">
@@ -260,9 +282,9 @@ body{
 </div>
 
 <div class="sticky">
-  <div style="display:flex; justify-content:space-between; align-items:center;">
-    <div style="font-weight:900;">$39.99</div>
-    <a href="#start" class="btn primary" style="padding:10px 15px;">Stop The Calls</a>
+  <div class="wrap sticky-content">
+    <div style="font-weight:900; font-size: 18px;">$39.99</div>
+    <a href="https://buy.stripe.com/3cI28q1yVa3W9iF3B70RG01" class="btn primary">Stop The Calls</a>
   </div>
 </div>
 
