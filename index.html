@@ -264,6 +264,30 @@ body{
   }
 }
 
+@media(max-width:800px){
+  /* Swipeable testimonials (override ONLY this section) */
+  .testimonial-grid{
+    display:flex !important;
+    flex-direction:row !important;
+    gap:16px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 6px 2px 12px;
+  }
+
+  .testimonial-card{
+    flex: 0 0 88%;
+    max-width: 88%;
+    scroll-snap-align: center;
+  }
+
+  /* Hide scrollbar */
+  .testimonial-grid::-webkit-scrollbar{ display:none; }
+  .testimonial-grid{ scrollbar-width:none; }
+}
+  
+
 </style>
 </head>
 <body>
