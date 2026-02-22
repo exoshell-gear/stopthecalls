@@ -171,6 +171,99 @@ body{
   .sticky-content { display: flex; justify-content: space-between; align-items: center; }
   .sticky .btn { width: auto; padding: 12px 20px; font-size: 15px; }
 }
+
+.proof-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    border: 1px solid var(--line);
+    border-radius: 32px;
+    background: rgba(13, 21, 39, 0.4);
+    padding: 60px 40px;
+    margin-bottom: 24px;
+  }
+
+  .proof-container h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    font-weight: 900;
+    margin: 0 0 20px;
+    color: var(--text);
+  }
+
+  .proof-container p {
+    font-size: 18px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0 0 30px; /* Space for the button below */
+  }
+
+  .proof-image-wrap { flex: 1.2; }
+  .proof-image-wrap img {
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+  }
+
+  .proof-text-wrap { flex: 1; display: flex; flex-direction: column; align-items: flex-start; }
+
+  /* Secondary Ghost Button Style */
+  .btn.secondary {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text);
+    border: 1px solid rgba(79, 140, 255, 0.3);
+    backdrop-filter: blur(8px);
+    font-size: 16px;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-weight: 800;
+    transition: 0.2s;
+  }
+
+  .btn.secondary:hover {
+    background: rgba(79, 140, 255, 0.1);
+    border-color: var(--accent1);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 800px) {
+    .proof-container {
+      flex-direction: column !important; 
+      padding: 40px 24px;
+      text-align: center;
+    }
+    .proof-text-wrap { align-items: center; } /* Center button on mobile */
+    
+    .reverse-mobile { flex-direction: column-reverse !important; }
+
+    .btn.secondary { width: 100%; }
+  }
+
+/* Secondary Ghost Button */
+.btn.secondary {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  border: 1px solid rgba(79, 140, 255, 0.3);
+  backdrop-filter: blur(8px);
+  font-size: 16px;
+}
+
+.btn.secondary:hover {
+  background: rgba(79, 140, 255, 0.1);
+  border-color: var(--accent1);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(79, 140, 255, 0.15);
+}
+
+@media (max-width: 800px) {
+  .btn.secondary {
+    width: 100%; /* Matches your mobile full-width requirement */
+  }
+}
+
 </style>
 </head>
 <body>
@@ -185,41 +278,41 @@ body{
   <section class="hero">
     <div class="fed-badge">Federal Law Protection (FDCPA)</div>
     <h1>Silence the collectors. <br>Reclaim your phone.</h1>
-    <p>Being in debt is not a crime. Don't let collectors use pressure and shame to take your money.  
+    <p>Being in debt is not a crime. Don't let collectors pressure and shame to take your money.  
 One legal notice from us shuts it all down.</p>
     <a href="https://buy.stripe.com/3cI28q1yVa3W9iF3B70RG01" class="btn primary">Stop The Calls · $39</a>
   </section>
 
-  <section class="reddit-proof">
-    <div style="flex: 1.2;">
-      <img src="screenshot.png" alt="Reddit proof of collector tactics" style="width: 100%; border-radius: 12px; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-    </div>
-    <div style="flex: 1;">
-      <h2 style="color:var(--accent1); margin:0;">We know their playbook.</h2>
-      <p style="color:var(--muted); line-height:1.6; margin-top: 15px;">
-        They target your family because they know the shame works. 
-        As this collector admits, it's a "scummy tactic" used to break you. 
-        <b>Our legal notice ends this by official decree.</b>
-      </p>
-    </div>
-  </section>
+  <section class="proof-container">
+  <div class="proof-image-wrap">
+    <img src="screenshot.png" alt="Proof of collector tactics">
+  </div>
+  <div class="proof-text-wrap">
+    <h2>We know their playbook.</h2>
+    <p>
+      They target your family because they know the shame works. 
+      As this collector admits, it's a "scummy tactic" used to break you. 
+      <b>Our legal notice ends this by official decree.</b>
+    </p>
+    <a href="https://buy.stripe.com/3cI28q1yVa3W9iF3B70RG01" class="btn secondary">Stop The Calls Now</a>
+  </div>
+</section>
 
-  <section class="reddit-proof">
-    <div style="flex: 1;">
-      <h2 style="color:var(--accent1); margin:0;">Why they are so aggressive</h2>
-      <p style="color:var(--muted); line-height:1.6; margin-top: 15px;">
-        Most debts have a legal time limit.
-Collectors know it.
-That’s why they increase pressure — calls, threats, “lawyer” letters.
-They want panic.
+<section class="proof-container reverse-mobile">
+  <div class="proof-text-wrap">
+    <h2>Why they are so aggressive.</h2>
+    <p>
+      Most debts have a legal time limit. Collectors know it.
+      That’s why they increase pressure — calls, threats, and “lawyer” letters.
+      They want panic before the clock runs out.
+    </p>
+    <a href="https://buy.stripe.com/3cI28q1yVa3W9iF3B70RG01" class="btn secondary">Stop The Calls Now</a>
+  </div>
+  <div class="proof-image-wrap">
+    <img src="screenshot-2.png" alt="Aggressive tactics proof">
+  </div>
+</section>
 
-        <b>We send the notice that ends it.</b>
-      </p>
-    </div>
-    <div style="flex: 1.2;">
-      <img src="screenshot-2.png" alt="Reddit proof of collector tactics" style="width: 100%; border-radius: 12px; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-    </div>
-  </section>
 
   <section class="section">
     <h2 style="text-align:center;">What Our Users Say</h2>
